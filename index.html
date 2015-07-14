@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>WhatAColor?!</title>
+
+        <link href="css/bootstrap.min.css" rel="stylesheet" />
+        <link href="css/sticky-footer.css" rel="stylesheet" />
+        <link href="css/site.css" rel="stylesheet" />
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+    </head>
+    <body>
+
+        <!-- MENU SUPERIOR -->
+        <nav class="navbar navbar-inverse navbar-static-top">
+            <div class="container">
+
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed"
+                            data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+                            aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="index.html">WhatAColor?!</a>
+                </div>
+
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="active"><a href="index.html">Home</a></li>
+                        <li><a href="#">Contato</a></li>
+                    </ul>
+                </div>
+
+            </div>
+        </nav><!-- FIM MENU SUPERIOR -->
+
+        <div class="container">
+
+            <!-- PRIMEIRA PROPAGANDA -->
+            <div class="container col-md-2 propaganda">PROPAGANDA</div>
+            <!-- PRIMEIRA PROPAGANDA -->
+
+            <!-- CONTAINER PRINCIPAL -->
+            <div class="container col-md-8">
+
+                <!-- AREA JOGO -->
+                <div class="area-jogo">
+
+                    <div class="pontuacao-erros">
+                        <ul class="list-inline text-right">
+                            <li class="text-left errou-acertou"></li>
+                            <li>Vidas: <span class="vidas">0</span></li>
+                            <li>Pontos: <span class="pontos">0</span></li>
+                        </ul>
+                    </div>
+
+                    <div class="conteudo-pre-jogo">
+                        <div class="col-md-6 col-md-offset-3">
+                            <h1 class="text-center texto-jogo">WhatAColor?!</h1>
+                            <button class="btn btn-default btn-lg btn-block btn-start">Start</button>
+                        </div>
+                        <div class="col-md-8 col-md-offset-2 botoes-resposta">
+                            <div class="col-md-6">
+                                <button class="btn btn-default btn-lg btn-block btn-resposta btn-esquerda">Amarelo</button>
+                            </div>
+                            <div class="col-md-6">
+                                <button class="btn btn-default btn-lg btn-block btn-resposta btn-direita">Azul</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div><!-- AREA JOGO -->
+
+            </div><!-- CONTAINER PRINCIPAL -->
+
+            <!-- SEGUNDA PROPAGANDA -->
+            <div class="container col-md-2 propaganda">PROPAGANDA</div>
+            <!-- SEGUNDA PROPAGANDA -->
+
+        </div>
+
+        <br><br>
+
+        <footer class="footer">
+            <div class="container">
+                <hr>
+                <p class="text-muted">&copy; WhatAColor?! 2015.</p>
+            </div>
+        </footer>
+
+        <script src="js/jogo.js"></script>
+
+    </body>
+</html>

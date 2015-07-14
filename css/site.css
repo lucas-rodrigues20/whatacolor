@@ -1,0 +1,81 @@
+.propaganda{
+    background-color: black;
+    color: white;
+}
+
+.area-jogo{
+    background-color: darkgrey;
+    min-height: 30em;
+}
+
+.conteudo-pre-jogo{
+    padding-top: 8em;
+}
+
+.conteudo-jogo{
+    padding-top: 7em;
+}
+
+.texto-jogo{
+    font-size: 56px;
+}
+
+.botoes-resposta{
+    display: none;
+    padding-top: 2em;
+}
+
+.btn-start button:focus{
+    outline: 0;
+}
+
+.botoes-resposta button{
+    border-style: solid;
+    border-color: #000;
+    border-width: 0.2em;
+    
+    background-color: black;
+    color: white;
+    text-transform: lowercase;
+}
+
+.botoes-resposta button:hover{
+    border-style: solid;
+    border-color: #000;
+    border-width: 0.2em;
+    
+    background-color: white;
+    color: black;
+}
+
+.botoes-resposta button:focus{
+    border-style: solid;
+    border-color: #000;
+    border-width: 0.2em;
+    
+    background-color: white;
+    color: black;
+    
+    outline: 0;
+}
+
+.botoes-resposta button:first-letter{
+    text-transform: uppercase;
+}
+
+.pontuacao-erros{
+    display: none;
+}
+
+.errou-acertou{
+    display: none;
+    text-transform: uppercase;
+}
+
+.acertou{
+    color: green;
+}
+
+.errou{
+    color: red;
+}
