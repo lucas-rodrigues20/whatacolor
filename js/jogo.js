@@ -13,12 +13,12 @@ var cores = [];
 
 var setarIdiomaPortugues = function() {
     cores[0] = {nome : "PRETO", codigo : "#000000"};
-    cores[1] = {nome : "AMARELO", codigo : "#FFFF00"};
-    cores[2] = {nome : "AZUL", codigo : "#0000FF"};
-    cores[3] = {nome : "VERDE", codigo : "#00FF00"};
-    cores[4] = {nome : "VERMELHO", codigo : "#FF0000"};
-    cores[5] = {nome : "ROXO", codigo : "#A020F0"};
-    cores[6] = {nome : "ROSA", codigo : "#FF1493"};
+    cores[1] = {nome : "AMARELO", codigo : "#FFD800"};
+    cores[2] = {nome : "AZUL", codigo : "#2400A8"};
+    cores[3] = {nome : "VERDE", codigo : "#00A83B"};
+    cores[4] = {nome : "VERMELHO", codigo : "#DD2924"};
+    cores[5] = {nome : "ROXO", codigo : "#5300A8"};
+    cores[6] = {nome : "ROSA", codigo : "#F0359A"};
     cores[7] = {nome : "BRANCO", codigo : "#FFFFFF"};
 };
 
@@ -37,7 +37,11 @@ function setaTexto(numero){
 var descobreCor = function() {
     for(i=0; i<cores.length; i++){
         if(cores[i].nome.toLowerCase() == $(this).text().toLowerCase()){
-            return cores[i].codigo;
+            if(i==7){
+                return cores[0].codigo;
+            }else{
+                return cores[i].codigo;
+            }
         }
     }
 };
@@ -123,13 +127,15 @@ var startGame = function(event){
     temporizador(2);
 
     $(this).hide();
+    $(".btn-help").hide();
     $(".botoes-resposta").show();
     $(".pontuacao-erros").show();
 
     $(".vidas").text(vidas);
     $(".pontos").text(pontos);
 
-    $(".conteudo-pre-jogo").removeClass("conteudo-pre-jogo").addClass("conteudo-jogo");
+    //$(".conteudo-pre-jogo").removeClass("conteudo-pre-jogo").addClass("conteudo-jogo");
+    $(".conteudo-pre-jogo").css({"padding-top" : "6em"});
 };
 
 function resetGame(){
@@ -141,10 +147,12 @@ function resetGame(){
     lifes = 3;
 
     $(".btn-start").show();
+    $(".btn-help").show();
     $(".botoes-resposta").hide();
     $(".pontuacao-erros").hide();
 
-    $(".conteudo-jogo").removeClass("conteudo-jogo").addClass("conteudo-pre-jogo");
+    //$(".conteudo-jogo").removeClass("conteudo-jogo").addClass("conteudo-pre-jogo");
+    $(".conteudo-pre-jogo").css({"padding-top" : "8em"});
     $(".texto-jogo").text("WhatAColor?!");
 }
 
@@ -155,9 +163,9 @@ var inicializar = function(){
 
     $(".btn-resposta").mousedown(contabilizaPontos);
 
-    $(".btn-resposta").mouseup(function(){
+    /*$(".btn-resposta").mouseup(function(){
         $(this).css({"background-color" : "black", "color" : "white"});
-    });
+    });*/
     $(".btn-resposta").mouseover(function(){
         $(this).css({"color" : descobreCor});
     });

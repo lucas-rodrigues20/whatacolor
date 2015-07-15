@@ -1,3 +1,7 @@
+body{
+    background-color: #F9F9F9;
+}
+
 .propaganda{
     background-color: black;
     color: white;
@@ -5,7 +9,11 @@
 
 .area-jogo{
     background-color: darkgrey;
+    background-image: linear-gradient(to bottom, #8F8E8E, #000 130%);
     min-height: 30em;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #696969;
 }
 
 .conteudo-pre-jogo{
@@ -17,7 +25,10 @@
 }
 
 .texto-jogo{
-    font-size: 56px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 4em;
+    font-weight: 600;
+    color: #000;
 }
 
 .botoes-resposta{
@@ -29,11 +40,15 @@
     outline: 0;
 }
 
+.btn-help button:focus{
+    outline: 0;
+}
+
 .botoes-resposta button{
     border-style: solid;
     border-color: #000;
     border-width: 0.2em;
-    
+
     background-color: black;
     color: white;
     text-transform: lowercase;
@@ -43,7 +58,7 @@
     border-style: solid;
     border-color: #000;
     border-width: 0.2em;
-    
+
     background-color: white;
     color: black;
 }
@@ -52,10 +67,10 @@
     border-style: solid;
     border-color: #000;
     border-width: 0.2em;
-    
+
     background-color: white;
     color: black;
-    
+
     outline: 0;
 }
 
@@ -70,6 +85,7 @@
 .errou-acertou{
     display: none;
     text-transform: uppercase;
+    font-weight: bold;
 }
 
 .acertou{

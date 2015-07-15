@@ -10,6 +10,7 @@
         <link href="css/bootstrap.min.css" rel="stylesheet" />
         <link href="css/sticky-footer.css" rel="stylesheet" />
         <link href="css/site.css" rel="stylesheet" />
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'>
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
@@ -35,7 +36,7 @@
                 <div id="navbar" class="navbar-collapse collapse">
                     <ul class="nav navbar-nav navbar-right">
                         <li class="active"><a href="index.html">Home</a></li>
-                        <li><a href="#">Contato</a></li>
+                        <li><a href="#">About</a></li>
                     </ul>
                 </div>
 
@@ -66,6 +67,7 @@
                         <div class="col-md-6 col-md-offset-3">
                             <h1 class="text-center texto-jogo">WhatAColor?!</h1>
                             <button class="btn btn-default btn-lg btn-block btn-start">Start</button>
+                            <button class="btn btn-default btn-lg btn-block btn-help" data-toggle="modal" data-target="#comoJogar">Como Jogar</button>
                         </div>
                         <div class="col-md-8 col-md-offset-2 botoes-resposta">
                             <div class="col-md-6">
@@ -78,6 +80,25 @@
                     </div>
 
                 </div><!-- AREA JOGO -->
+
+                <!-- MODAL -->
+                <div class="modal fade" id="comoJogar" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                                <h4 class="modal-title" id="myModalLabel">Como Jogar</h4>
+                            </div>
+                            <div class="modal-body">
+                                <p class="text-center">Para pontuar, clique no botão que indica a cor em que a palavra está escrita.</p>
+                                <p class="text-center">Tente fazer o maior número de pontos que conseguir. Boa Sorte!</p>
+                                <img src="images/exemplo.jpg" class="img-responsive img-thumbnail" alt="Exemplo">
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- MODAL -->
 
             </div><!-- CONTAINER PRINCIPAL -->
 
