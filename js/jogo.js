@@ -10,6 +10,9 @@ var ciclo;
 
 
 var cores = [];
+var msgAcertou = "";
+var msgErrou = "";
+var msgFinal = "";
 
 var setarIdiomaPortugues = function() {
     cores[0] = {nome : "PRETO", codigo : "#000000"};
@@ -20,6 +23,47 @@ var setarIdiomaPortugues = function() {
     cores[5] = {nome : "ROXO", codigo : "#5300A8"};
     cores[6] = {nome : "ROSA", codigo : "#F0359A"};
     cores[7] = {nome : "BRANCO", codigo : "#FFFFFF"};
+    
+    $(".txt-vidas").text("Vidas");
+    $(".txt-pontos").text("Pontos");
+    $(".btn-start").text("Começar");
+    $(".btn-help").text("Como Jogar");
+    
+    $(".modal-title").text("Como Jogar");
+    $(".txt-help-1").text("Para pontuar, clique no botão que indica a cor em que a palavra está escrita.");
+    $(".txt-help-2").text("Tente fazer o maior número de pontos que conseguir. Boa Sorte!");
+    $(".img-pt").show();
+    $(".img-en").hide();
+    
+    msgAcertou = "Acertou!"
+    msgErrou = "Errou!"
+    msgFinal = "Fim de jogo!\nPontuação: ";
+};
+
+var setarIdiomaIngles = function() {
+    cores[0] = {nome : "BLACK", codigo : "#000000"};
+    cores[1] = {nome : "YELLOW", codigo : "#FFD800"};
+    cores[2] = {nome : "BLUE", codigo : "#2400A8"};
+    cores[3] = {nome : "GREEN", codigo : "#00A83B"};
+    cores[4] = {nome : "RED", codigo : "#DD2924"};
+    cores[5] = {nome : "PURPLE", codigo : "#5300A8"};
+    cores[6] = {nome : "PINK", codigo : "#F0359A"};
+    cores[7] = {nome : "WHITE", codigo : "#FFFFFF"};
+    
+    $(".txt-vidas").text("Lifes");
+    $(".txt-pontos").text("Score");
+    $(".btn-start").text("Start");
+    $(".btn-help").text("How To Play");
+    
+    $(".modal-title").text("How To Play");
+    $(".txt-help-1").text("To score, click the button that indicates the color in which the word is written.");
+    $(".txt-help-2").text("Try to make as many points as you can. Good Luck!");
+    $(".img-en").show();
+    $(".img-pt").hide();
+    
+    msgAcertou = "Correct!"
+    msgErrou = "Wrong!"
+    msgFinal = "Game Over!\nScore: ";
 };
 
 function temporizador(tempo){
@@ -86,15 +130,15 @@ function subtrairVidas(){
     if(lifes > 0){
         $(".vidas").text(lifes);
         
-        $(".errou-acertou").text("errou!").removeClass("acertou").addClass("errou");
+        $(".errou-acertou").text(msgErrou).removeClass("acertou").addClass("errou");
 
         mudaCor();
         temporizador(2);
     }else{
-        $(".errou-acertou").text("errou!").removeClass("acertou").addClass("errou");
+        $(".errou-acertou").text(msgErrou).removeClass("acertou").addClass("errou");
         $(".vidas").text(lifes);
         
-        alert("Fim de jogo!\nPontuação Final: "+placar);
+        alert(msgFinal+placar);
         resetGame();
     }
 
@@ -107,7 +151,7 @@ var contabilizaPontos = function(event){
     if($(this).text() == textoCorTexto){
         placar = placar + 1;
         
-        $(".errou-acertou").text("acertou!").removeClass("errou").addClass("acertou");
+        $(".errou-acertou").text(msgAcertou).removeClass("errou").addClass("acertou");
         
         $(".pontos").text(placar);
         mudaCor();
@@ -124,7 +168,7 @@ var startGame = function(event){
     $(".pontos").text(placar);
 
     mudaCor();
-    temporizador(2);
+    //temporizador(2);
 
     $(this).hide();
     $(".btn-help").hide();
@@ -157,7 +201,8 @@ function resetGame(){
 }
 
 var inicializar = function(){
-    setarIdiomaPortugues();
+    //setarIdiomaPortugues();
+    setarIdiomaIngles();
     
     $(".btn-start").click(startGame);
 
