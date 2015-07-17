@@ -9,6 +9,7 @@
 
         <link href="css/bootstrap.min.css" rel="stylesheet" />
         <link href="css/sticky-footer.css" rel="stylesheet" />
+        <link rel="stylesheet" type="text/css" href="css/flaticon.css">
         <link href="css/site.css" rel="stylesheet" />
         <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'>
 
@@ -36,7 +37,14 @@
                 <div id="navbar" class="navbar-collapse collapse">
                     <ul class="nav navbar-nav navbar-right">
                         <li class="active"><a href="index.html">Home</a></li>
-                        <li><a href="#">About</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Language <span class="idioma-selecionado">EN</span> <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#" class="ingles">EN</a></li>
+                                <li><a href="#" class="portugues">PT</a></li>
+                            </ul>
+                        </li>
                     </ul>
                 </div>
 
@@ -80,6 +88,10 @@
                     </div>
 
                 </div><!-- AREA JOGO -->
+                
+                <div class="social text-center">
+                    Curtir, Compartilhar, Seguir, Tweetar
+                </div>
 
                 <!-- MODAL -->
                 <div class="modal fade" id="comoJogar" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
@@ -112,9 +124,20 @@
         <br><br>
 
         <footer class="footer">
-            <div class="container">
+            <div class="container text-center">
                 <hr>
-                <p class="text-muted">&copy; WhatAColor?! 2015.</p>
+                <p>
+                    <a href="https://twitter.com/baiaku22" title="Twitter" target="_blank">
+                        <span class="flaticon-twitter15"></span>
+                    </a>
+                    <a href="https://www.linkedin.com/pub/lucas-rodrigues-moura/a7/574/823" title="Linkedin" target="_blank">
+                        <span class="flaticon-linkedin9"></span>
+                    </a>
+                    <a href="https://github.com/lucas-rodrigues20" title="Github" target="_blank">
+                        <span class="flaticon-github12"></span>
+                    </a>
+                </p>
+                <p class="text-muted txt-rodape">&copy; WhatAColor?! 2015.</p>
             </div>
         </footer>
 

@@ -35,6 +35,9 @@ var setarIdiomaPortugues = function() {
     $(".img-pt").show();
     $(".img-en").hide();
     
+    $(".sobre-portugues").show();
+    $(".sobre-ingles").hide();
+    
     msgAcertou = "Acertou!"
     msgErrou = "Errou!"
     msgFinal = "Fim de jogo!\nPontuação: ";
@@ -60,6 +63,9 @@ var setarIdiomaIngles = function() {
     $(".txt-help-2").text("Try to make as many points as you can. Good Luck!");
     $(".img-en").show();
     $(".img-pt").hide();
+    
+    $(".sobre-portugues").hide();
+    $(".sobre-ingles").show();
     
     msgAcertou = "Correct!"
     msgErrou = "Wrong!"
@@ -168,7 +174,7 @@ var startGame = function(event){
     $(".pontos").text(placar);
 
     mudaCor();
-    //temporizador(2);
+    temporizador(2);
 
     $(this).hide();
     $(".btn-help").hide();
@@ -201,8 +207,18 @@ function resetGame(){
 }
 
 var inicializar = function(){
-    //setarIdiomaPortugues();
     setarIdiomaIngles();
+    
+    $(".portugues").click(function(event){
+        event.preventDefault();
+        $(".idioma-selecionado").text("PT");
+        setarIdiomaPortugues();
+    });
+    $(".ingles").click(function(event){
+        event.preventDefault();
+        $(".idioma-selecionado").text("EN");
+        setarIdiomaIngles();
+    });
     
     $(".btn-start").click(startGame);
 

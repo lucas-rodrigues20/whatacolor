@@ -95,3 +95,20 @@ body{
 .errou{
     color: red;
 }
+
+.txt-rodape{
+    padding-left: 2em;
+}
+
+footer a{
+    color: #000;
+}
+
+footer a:visited{
+    color: #000;
+}
+
+footer a:hover{
+    color: #696969;
+    text-decoration: none;
+}
