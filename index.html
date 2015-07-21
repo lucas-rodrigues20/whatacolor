@@ -4,6 +4,30 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="author" content="Lucas Rodrigues">
+        <meta name="description" content="WhatAColor?! - Say the colors, not the words! - A game made in Javascript.">
+        <meta name="keywords" content="whatacolor, jogos, jogo, games, game, web, javascript">
+
+        <link rel="shortcut icon" href="/faviconit/favicon.ico">
+        <link rel="icon" sizes="16x16 32x32 64x64" href="/faviconit/favicon.ico">
+        <link rel="icon" type="image/png" sizes="196x196" href="/faviconit/favicon-192.png">
+        <link rel="icon" type="image/png" sizes="160x160" href="/faviconit/favicon-160.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="/faviconit/favicon-96.png">
+        <link rel="icon" type="image/png" sizes="64x64" href="/faviconit/favicon-64.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/faviconit/favicon-32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/faviconit/favicon-16.png">
+        <link rel="apple-touch-icon" href="/faviconit/favicon-57.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="/faviconit/favicon-114.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="/faviconit/favicon-72.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="/faviconit/favicon-144.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="/faviconit/favicon-60.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="/faviconit/favicon-120.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="/faviconit/favicon-76.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="/faviconit/favicon-152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="/faviconit/favicon-180.png">
+        <meta name="msapplication-TileColor" content="#FFFFFF">
+        <meta name="msapplication-TileImage" content="/faviconit/favicon-144.png">
+        <meta name="msapplication-config" content="/faviconit/browserconfig.xml">
 
         <title>WhatAColor?!</title>
 
@@ -17,6 +41,37 @@
         <script src="js/bootstrap.min.js"></script>
     </head>
     <body>
+        <!-- FACEBOOK SDK -->
+        <div id="fb-root"></div>
+        <script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v2.4";
+    fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+        <!-- FACEBOOK SDK -->
+
+        <!-- TWITTER SDK -->
+        <script>
+            window.twttr = (function(d, s, id) {
+                var js, fjs = d.getElementsByTagName(s)[0],
+                    t = window.twttr || {};
+                if (d.getElementById(id)) return t;
+                js = d.createElement(s);
+                js.id = id;
+                js.src = "https://platform.twitter.com/widgets.js";
+                fjs.parentNode.insertBefore(js, fjs);
+
+                t._e = [];
+                t.ready = function(f) {
+                    t._e.push(f);
+                };
+
+                return t;
+            }(document, "script", "twitter-wjs"));
+        </script>
+        <!-- TWITTER SDK -->
 
         <!-- MENU SUPERIOR -->
         <nav class="navbar navbar-inverse navbar-static-top">
@@ -88,60 +143,81 @@
                     </div>
 
                 </div><!-- AREA JOGO -->
-                
+
                 <div class="social text-center">
-                    Curtir, Compartilhar, Seguir, Tweetar
-                </div>
+                    <p></p>
 
-                <!-- MODAL -->
-                <div class="modal fade" id="comoJogar" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-                    <div class="modal-dialog" role="document">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                                <h4 class="modal-title" id="myModalLabel">Como Jogar</h4>
-                            </div>
-                            <div class="modal-body">
-                                <p class="txt-help-1 text-center">Para pontuar, clique no botão que indica a cor em que a palavra está escrita.</p>
-                                <p class="txt-help-2 text-center">Tente fazer o maior número de pontos que conseguir. Boa Sorte!</p>
-                                <img src="images/exemplo-pt.jpg" class="img-pt img-responsive img-thumbnail" alt="Exemplo">
-                                <img src="images/exemplo-en.jpg" class="img-en img-responsive img-thumbnail" alt="Example">
-                            </div>
-                        </div>
-                    </div>
-                </div><!-- MODAL -->
+                    <p>
+                    <div class="fb-like" data-href="https://whatacolor.tk" data-layout="standard" data-share="true"
+                         data-show-faces="false"></div>
+                    </p>
+                <p>
+                    <a href="https://twitter.com/share" class="twitter-share-button" data-url="https://whatacolor.tk"
+                       data-text="I am playing WhataColor?!">Tweet</a>
+                    <a class="twitter-follow-button" href="https://twitter.com/whatacolorgame">Follow @WhatAColor</a>
+                    <a class="twitter-follow-button" href="https://twitter.com/baiaku22">Follow @Baiaku22</a>
+                </p>
 
-            </div><!-- CONTAINER PRINCIPAL -->
-
-            <!-- SEGUNDA PROPAGANDA -->
-            <div class="container col-md-2 propaganda">PROPAGANDA</div>
-            <!-- SEGUNDA PROPAGANDA -->
-
+                <p>
+                <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                    <input type="hidden" name="cmd" value="_s-xclick">
+                    <input type="hidden" name="hosted_button_id" value="V2RXY2XT86EAY">
+                    <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif" border="0" 
+                           name="submit" alt="PayPal - The safer, easier way to pay online!">
+                    <img alt="" border="0" src="https://www.paypalobjects.com/pt_BR/i/scr/pixel.gif" width="1" height="1">
+                </form>
+                </p>
         </div>
 
-        <br><br>
-
-        <footer class="footer">
-            <div class="container text-center">
-                <hr>
-                <p>
-                    <a href="https://twitter.com/baiaku22" title="Twitter" target="_blank">
-                        <span class="flaticon-twitter15"></span>
-                    </a>
-                    <a href="https://www.linkedin.com/pub/lucas-rodrigues-moura/a7/574/823" title="Linkedin" target="_blank">
-                        <span class="flaticon-linkedin9"></span>
-                    </a>
-                    <a href="https://github.com/lucas-rodrigues20" title="Github" target="_blank">
-                        <span class="flaticon-github12"></span>
-                    </a>
-                </p>
-                <p class="text-muted txt-rodape">&copy; WhatAColor?! 2015.</p>
+        <!-- MODAL -->
+        <div class="modal fade" id="comoJogar" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <h4 class="modal-title" id="myModalLabel">Como Jogar</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p class="txt-help-1 text-center">Para pontuar, clique no botão que indica a cor em que a palavra está escrita.</p>
+                        <p class="txt-help-2 text-center">Tente fazer o maior número de pontos que conseguir. Boa Sorte!</p>
+                        <img src="images/exemplo-pt.jpg" class="img-pt img-responsive img-thumbnail" alt="Exemplo">
+                        <img src="images/exemplo-en.jpg" class="img-en img-responsive img-thumbnail" alt="Example">
+                    </div>
+                </div>
             </div>
-        </footer>
+        </div><!-- MODAL -->
 
-        <script src="js/jogo.js"></script>
+        </div><!-- CONTAINER PRINCIPAL -->
 
-    </body>
+    <!-- SEGUNDA PROPAGANDA -->
+    <div class="container col-md-2 propaganda">PROPAGANDA</div>
+    <!-- SEGUNDA PROPAGANDA -->
+
+    </div>
+
+<br><br>
+
+<footer class="footer">
+    <div class="container text-center">
+        <hr>
+        <p>
+            <a href="https://twitter.com/baiaku22" title="Twitter" target="_blank">
+                <span class="flaticon-twitter15"></span>
+            </a>
+            <a href="https://www.linkedin.com/pub/lucas-rodrigues-moura/a7/574/823" title="Linkedin" target="_blank">
+                <span class="flaticon-linkedin9"></span>
+            </a>
+            <a href="https://github.com/lucas-rodrigues20" title="Github" target="_blank">
+                <span class="flaticon-github12"></span>
+            </a>
+        </p>
+        <p class="text-muted txt-rodape">&copy; WhatAColor?! 2015.</p>
+    </div>
+</footer>
+
+<script src="js/jogo.js"></script>
+
+</body>
 </html>
